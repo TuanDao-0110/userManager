@@ -1,23 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import LoginTemplate from './Template/LoginTemplate';
+import { Route, Routes, useNavigate } from "react-router-dom";
+import UserTemplate from './Template/UserTemplate';
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { NAVIGATOR } from './ultilities/TypeServiceContanst';
+import ErrorPages from './Pages/ErrorPages';
 
+import LoadingBackGround from './Component/LoadingBackGround'
+import ModalLogout from './Component/ModalLogout';
 function App() {
+
+  const navigate = useNavigate();
+  const dispatch = useDispatch()
+  useEffect(() => {
+
+    dispatch({
+      type: NAVIGATOR,
+      navigator: navigate
+    })
+  }, [])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div >
+      {/* <LoginTemplate></LoginTemplate> */}
+      <LoadingBackGround></LoadingBackGround>
+      <ModalLogout></ModalLogout>
+      <Routes >
+
+        {/* <Route exact path="/managerment/*" element={<UserTemplate />}  ></Route> */}
+
+        <Route exact path="/managerment/:id/*" element={<UserTemplate />}  ></Route>
+        <Route exact path="/" element={<LoginTemplate />}></Route>
+        <Route path='*' element={<ErrorPages></ErrorPages>}></Route>
+
+      </Routes>
     </div>
   );
 }

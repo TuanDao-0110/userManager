@@ -1,0 +1,32 @@
+
+export const SIGN_UP_SAGA = 'SIGN_UP_SAGA'
+export const SIGN_IN_SAGA = 'SIGN_IN_SAGA'
+export const SIGN_IN_REDUCER = 'SIGN_IN_REDUCER'
+
+
+export const GET_USER_LIST_SAGA = 'GET_USER_LIST_SAGA'
+
+export const GET_USER_LIST_REDUCER = 'GET_USER_LIST_REDUCER'
+
+export const EDIT_FORM_REDUCER = 'EDIT_FORM_REDUCER'
+export const EDIT_USER_SAGA = 'EDIT_USER_SAGA'
+
+
+export const DEL_USER_SAGA = 'DEL_USER_SAGA'
+
+
+
+export const TOGGLE_EDIT_FORM = 'TOGGLE_EDIT_FORM'
+
+
+export const NAVIGATOR = 'NAVIGATOR'
+
+
+export const TURN_ON_BACK_GROUND = 'TURN_ON_BACK_GROUND'
+
+export const TURN_OFF_BACK_GROUND = 'TURN_OFF_BACK_GROUND'
+
+
+
+export const OPEN_MODAL_LOGOUT = 'OPEN_MODAL_LOGOUT'
+export const CLOSE_MODAL_LOGOUT = 'CLOSE_MODAL_LOGOUT'
