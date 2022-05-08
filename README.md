@@ -4,7 +4,7 @@ Use Route Version 6 to route each page component.
 
 Use Redux Saga as primary Store
 
-Vison Page  at : 
+Vison Page  at : (please allow Allowed to show insecure content in your Browser setting because my clients-server made up reqests managed throught HTTP ) 
 
 
 https://tuanusermanagerment.surge.sh/
